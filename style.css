@@ -1,0 +1,82 @@
+:root{
+  --index: 0;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section{
+  position: relative;
+  width: 500px;
+  height: 500px;
+  background-color: antiquewhite;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+div.slider{
+  display: flex;
+  width: fit-content;
+  user-select: none;
+}
+
+div.slider.active{
+  margin-left: calc(var(--index) * -500px);
+  transition: 0.5s all;
+}
+
+.slider article:nth-child(1){
+  background-color: red;
+}
+.slider article:nth-child(2){
+  background-color: blue;
+}
+.slider article:nth-child(3){
+  background-color: green;
+}
+.slider article:nth-child(4){
+  background-color: white;
+}
+.slider article:nth-child(5){
+  background-color: yellow;
+}
+.slider article{
+  height: 500px;
+  width: 500px;
+  text-align: center;
+  padding: 50px ;
+  
+}
+
+.slider button{
+  display: block;
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+  font-family: monospace;
+  font-size: 30px;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid black;
+}
+
+.slider button.next-btn{
+  right: 0px;
+}
+.slider button.prev-btn{
+  left: 0px;
+}
